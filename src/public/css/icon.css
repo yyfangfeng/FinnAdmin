@@ -1,0 +1,11 @@
+
+/* 窗口按钮 */
+.a_close {
+    background-image: url("../image/close.png");
+}
+.a_max {
+    background-image: url("../image/max.png");
+}
+.a_min {
+    background-image: url("../image/min.png");
+}

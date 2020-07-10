@@ -1,14 +1,15 @@
-const webpack = require('webpack')
 const path = require('path')
-
-let isPro = process.env.NODE_ENV === 'production'
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    mode: 'production',
-    entry: path.resolve(__dirname, '../src/main.js'),
+    entry: [
+        path.resolve(__dirname, '../src/main.js')
+    ],
     output: {
-        path: path.resolve(__dirname, '../output/')
+        filename: 'bundle.[hash:8].js',
+        path: path.resolve(__dirname, '../dist')
     },
+    devtool: 'inline-source-map',
     module: {
         rules: [
             {
@@ -16,8 +17,12 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 options: {
-                    presets: ['env']
+                    presets: ['env'],
                 }
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
             },
             {
                 test: /\.(jpg|png|svg|gif)$/,
@@ -28,8 +33,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-                loader: 'url-loader'
+              test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+              loader: 'url-loader'
             }
         ]
     },
@@ -37,8 +42,12 @@ module.exports = {
         extensions: ['.js'],
         alias: {
             "@": path.resolve(__dirname, "../src"),
-            "~config": path.resolve(__dirname, "../config"),
         }
     },
-    plugins: []
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: path.resolve(__dirname, '../src/index.html')
+        })
+    ]
 }

@@ -1,0 +1,28 @@
+body::-webkit-scrollbar {
+  width: 7px;
+  height: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #d2dcdf;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #b7c3c7;
+}
+
+body div::-webkit-scrollbar, body textarea::-webkit-scrollbar, body pre::-webkit-scrollbar, body table::-webkit-scrollbar {
+  width: 7px;
+  height: 6px;
+}
+
+body div::-webkit-scrollbar-thumb, body textarea::-webkit-scrollbar-thumb, body pre::-webkit-scrollbar-thumb, body table::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #d2dcdf;
+}
+
+body div::-webkit-scrollbar-thumb:hover, body textarea::-webkit-scrollbar-thumb:hover, body pre::-webkit-scrollbar-thumb:hover, body table::-webkit-scrollbar-thumb:hover {
+  background: #b7c3c7;
+}
+/*# sourceMappingURL=scroll.css.map */

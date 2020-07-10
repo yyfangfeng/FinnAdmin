@@ -1,5 +1,5 @@
 let directory = {
-    user:       { id: 'userListForm', list_form: 'user' },
+    user:       { id: 'userListForm', listForm: 'user' },
     user_info:  { id: 'userInfoListForm' },
     article:    { id: 'articleListForm' },
 }
