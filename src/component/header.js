@@ -1,6 +1,6 @@
 let header = {
-    className: 'header',
-    compType: 'main',
+    class_name: 'header',
+    parent: 'FinnAdmin',
     template: 
     `<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand font-weight-bold" href="/manage">F博客管理后台</a>

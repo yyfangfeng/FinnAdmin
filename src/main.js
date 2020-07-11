@@ -11,14 +11,34 @@ class FinnAdmin {
     }
     init () {
         this.el = document.querySelector(this.id)
-        // this.initUI()
-        this.renderComponent()
+        this.initUI()
     }
     initUI () {
-        
+        this.renderComponent()
     }
+
+    // 渲染组件
     renderComponent () {
-        
+        for (let comp_name in this.component) {
+            this.loopRenderComp(this.component[comp_name])
+        }
+    }
+    loopRenderComp (comp) {
+        if (comp.parent === 'FinnAdmin') {
+            comp.el = $(comp.template)[0]
+            $(this.el).append(comp.el)
+        }
+
+        if (comp.child) {
+            for (let child_name in comp.child) {
+                let child_item = comp.child[child_name]
+
+                child_item.el = $(child_item.template)[0]
+                $(comp.el).append(child_item.el)
+
+                this.loopRenderComp(child_item)
+            }
+        }
     }
 }
 
@@ -29,22 +49,3 @@ let finnAdmin = new FinnAdmin({
 })
 
 console.log(finnAdmin)
-
-
-let arr1 = [1, 2, 2, 1]
-let arr2 = [2, 2]
-
-function set (arr1, arr2) {
-    let arr = []
-
-    for (let i = 0; i < arr1.length; i++) {
-        if (arr2.indexOf(arr1[i]) > -1) {
-            arr.push(arr1[i])
-            arr1.splice(i, 1)
-        }
-    }
-
-    return arr
-}
-
-console.log(set(arr1, arr2))

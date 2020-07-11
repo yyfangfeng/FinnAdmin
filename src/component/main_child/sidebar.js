@@ -1,6 +1,6 @@
 let sidebar = {
-    className: 'sidebar',
-    compType: 'main',
+    class_name: 'sidebar',
+    parent: 'main',
     template: 
     `<div id="side_bar" class="side_bar box_shadow">
         <ul class="navbar-nav font-weight-bold">
