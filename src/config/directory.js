@@ -1,5 +1,7 @@
+import user from '../listForm/user'
+
 let directory = {
-    user:       { id: 'userListForm', listForm: 'user' },
+    user:       { id: 'userListForm', listForm: user },
     user_info:  { id: 'userInfoListForm' },
     article:    { id: 'articleListForm' },
 }
