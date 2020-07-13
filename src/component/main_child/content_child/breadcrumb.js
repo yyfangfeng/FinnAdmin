@@ -1,5 +1,5 @@
 let breadcrumb = {
-    class_name: 'breadcrumb',
+    name: 'breadcrumb',
     parent: 'content',
     template: 
     `<ol class="breadcrumb box_shadow">

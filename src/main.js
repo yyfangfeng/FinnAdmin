@@ -1,4 +1,4 @@
-import directory from './config/directory'
+import directory from './config'
 import component from './component/component'
 
 
@@ -7,7 +7,7 @@ class FinnAdmin {
         for (let key in params) {
             this[key] = params[key]
         }
-        this.init()
+        // this.init()
     }
     init () {
         this.el = document.querySelector(this.id)
@@ -41,6 +41,7 @@ class FinnAdmin {
         }
     }
 }
+
 
 let finnAdmin = new FinnAdmin({
     id: '#FinnAdmin',

@@ -1,7 +1,7 @@
 import breadcrumb from './content_child/breadcrumb'
 
 let content = {
-    class_name: 'content',
+    name: 'content',
     parent: 'main',
     template: `<div id="content"></div>`,
     child: {

@@ -1,5 +1,5 @@
 let header = {
-    class_name: 'header',
+    name: 'header',
     parent: 'FinnAdmin',
     template: 
     `<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
